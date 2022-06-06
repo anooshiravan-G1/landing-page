@@ -1,0 +1,258 @@
+{% load static %}
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <!-- Bootstrap core CSS -->
+        <!--<link href="./css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="{% static './assets/css/aos.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/bootstrap.rtl.min.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/swiper-bundle.min.css' %}" rel="stylesheet">
+        <!-- Custom Style   -->
+        <link href="{% static './assets/css/style.css' %}" rel="stylesheet">
+        <!-- Icons  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+
+
+    <body>
+        <!--    Header     -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+          <div class="container d-flex justify-content-between align-items-center">
+      
+            <div class="logo">
+              <h1><a href="index.html">اکوایکس</a></h1>
+              <!-- logo -->
+              <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+      
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="active " href="{% url "indexPage" %}">خانه</a></li>
+                <li><a href="{% url 'projectPage' %}">پروژه</a></li>
+                <li><a href="{% url 'logoPage' %}">لوگو</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- navbar -->
+      
+          </div>
+      </header>
+
+
+  <!--  Main    -->
+  <main id="main">
+
+    <section class="hero-section"> 
+      
+      <div class="wave">
+        <svg width="50%" height="355px" viewBox="0 0 1920 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
+              <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,667 L1017.15166,667 L0,667 L0,439.134243 Z" id="Path"></path>
+            </g>
+          </g>
+        </svg>
+
+      </div>
+      
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="row justify-content-center">
+              <div class="col-md-7 text-center hero-text">
+                <h1 data-aos="fade-up" data-aos-delay="" class="headFormat"> فرم دید کلی نسبت به پروژه</h1>
+                <p class="mb-5 headFormat" data-aos="fade-up" data-aos-delay="100">برای پروژه خود، فرم زیر را تکمیل کرده و منتظر پاسخ ما باشید.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </section>
+
+    <section class="section">
+      <!-- CONTAINER -->
+      <div class="container align-items-center">
+        <div class="row g-0 justify-content-center">
+          <!-- TITLE -->
+          
+          <!-- FORMS -->
+          {% block content %}
+          {% if messages %}
+                  {% for message in messages %}
+                  <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+                  {% endfor %}
+              {% endif %}
+
+              
+              {% if form.errors %}
+              {% for field in form %}
+                  {% for error in field.errors %}
+                      <p> {{ error }} </p>
+                  {% endfor %}
+              {% endfor %}
+          {% endif %}
+          <div class="mx-0 px-0">
+            <div class="progress">
+              <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger bg-frm" role="progressbar" style="width: 0%"></div>
+           </div>
+           <div id="qbox-container">
+              <form class="needs-validation" id="form-wrapper" method="POST" name="formWrapper">
+                {% csrf_token %} 
+                 <!-- STEPS HERE -->
+                 <div id="frmStps-container">
+                   <!-- 1 -->
+                  <div class="frmStp">
+                     <h4>بخش اول:دید کلی به پروژه</h4>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          به طور مختصر چالش شرکت خود را شرح دهید:
+                        </label> 
+                        {{ form.challenge }}
+                     </div>
+                     <div class="mt-2">
+                        <label class="form-label prjLabel">
+                          تاریخ ها(تا چه تاریخی میخواهید پروژه به انجام شود) و همچنین پیشرفت مورد انتظار را درج کنید.
+                        </label> 
+                        {{ form.dates }}
+                     </div>
+                     <div class="mt-2">
+                        <label class="form-label prjLabel">
+                          موارد بیشتر درمورد پروژه:
+                        </label> 
+                        {{ form.moreExplain }}
+                     </div>
+                     <div class="mt-2">
+                        <label class="form-label prjLabel">
+                          هدف و نتایجه ای که از پروژه میخواهید:
+                        </label> 
+                        {{ form.results }}
+                     </div>
+                  </div>
+                  <!--  2 -->
+                  <div class="frmStp">
+                     <h4>بخش اول:دید کلی به پروژه</h4>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          الزامات پروژه رو مشخص کنید:
+                        </label> 
+                        {{ form.prjRequirements }}
+                     </div>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          کار هایی که دوست دارید انجام شود ولی صد  در صد لازم نیست:
+                        </label> 
+                        {{ form.wyLike }}
+                     </div>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          محدودیت هایی که برای پروژه در نظر گرفتید
+                        </label> 
+                        {{ form.limits }}
+                     </div>
+                  </div>
+                  <!--  3  -->
+                  <div class="frmStp">
+                     <h4>بخش دوم:اهداف و مامورت پروژه</h4>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          اهداف اولیه درمورد پروژه،یعنی هدفی که قراره به آن دست پیدا کنید،حل کردن مشکلات بقیه،همراه کردن مشتریان با خود و ...
+                        </label> 
+                        {{ form.goals }}
+                     </div>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          نحوه سنجش موفقیت را با استفاده از معیارهای خاص مشخص کنید:
+                        </label> 
+                        {{ form.measurement }}
+                     </div>
+                     <div class="mt-1">
+                      <label class="form-label prjLabel">
+                        مشخص کنید که مخاطب چه کسی است، دید شما برای ادامه پروژه چیست، و نکات اصلی مشکل  مشتری را مشخص کنید.
+                      </label> 
+                      {{ form.audience }}
+                   </div>
+                   <div class="mt-1">
+                      <label class="form-label prjLabel">
+                        مخاطب ثانویه و مشکلات آن ها در ضمینه کاری خود را مشخص کنید
+                      </label> 
+                      {{ form.problems }}
+                   </div>
+
+                  </div>
+                  <!--  4 -->
+                  <div class="frmStp">
+                     <h4>بخش سوم:ارتباط ما با شما</h4>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          نام شرکت ، نام و نام خانوادگی خود را وارد کنید.
+                        </label> 
+                        {{ form.introduction }}
+                     </div>
+                     <div class="mt-1">
+                        <label class="form-label prjLabel">
+                          شماره تماس و یا ایمیل خود را برای برقراری ارتباط وارد کنید.
+                        </label> 
+                        {{ form.connection }}
+                     </div>
+
+                  </div>
+
+                  <!--  5 -->
+                  <div class="frmStp">
+                     <div class="mt-1">
+                        <div class="closing-text">
+                           <h4>اتمام فرم</h4>
+                           <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
+                           <p>بر روی ثبت کلیک کنید.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="success">
+                     <div class="mt-5">
+                        <h4>درخواست شما با موفقیت ثبت شد.</h4>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز </p>
+                        <a class="back-link" href="">بازگشت به اول ➜</a>
+                     </div>
+                  </div>
+               </div>
+               <div id="q-box__buttons">
+                  <button id="prev-btn" class="prjBtn" type="button">صفحه قبلی</button> 
+                  <button id="next-btn" class="prjBtn" type="button">صفحه بعدی</button> 
+                  <button id="submit-btn" class="prjBtn" type="submit" name="submit-btn">ثبت</button>
+               </div>
+              </form>
+
+            {% endblock %}
+           </div>
+          </div>
+        </div>
+      </div>
+      <div id="preloader-wrapper">
+        <div id="preloader"></div>
+        <div class="preloader-section section-left"></div>
+        <div class="preloader-section section-right"></div>
+     </div>
+    </section>
+
+  </main><!-- End main -->
+
+  
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+        <!--  Scripts   -->
+        <script src="{% static './assets/js/aos.js' %}"></script>
+        <!--  jQuery    -->
+        <script src="{% static './assets/js/jquery-3.6.0.min.js' %}"></script>
+        <!--  BootStrap -->
+        <script src="{% static './assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{%static './assets/js/swiper-bundle.min.js' %}"></script>
+        <!--  Custom JS-->
+        <script src="{% static './assets/js/main.js' %}"></script>
+        <script src="{% static './assets/js/contactForm.js' %}"></script>
+        <script src="{% static './assets/js/projectForm.js' %}"></script>
+    </body>
+</html>

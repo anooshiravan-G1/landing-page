@@ -1,0 +1,352 @@
+{% load static %}
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <!-- Bootstrap core CSS -->
+        <!--<link href="./css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="{% static './assets/css/aos.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/bootstrap.rtl.min.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/swiper-bundle.min.css' %}" rel="stylesheet">
+        <!-- Custom Style   -->
+        <link href="{% static './assets/css/style.css' %}" rel="stylesheet">
+        <!-- Icons  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+
+
+    <body>
+        <!--    Header     -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex justify-content-between align-items-center">
+        
+              <div class="logo">
+                <h1><a href="index.html">اکوایکس</a></h1>
+                <!-- logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+              </div>
+        
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="active " href="{% url "indexPage" %}">خانه</a></li>
+                  <li><a href="{% url 'projectPage' %}">پروژه</a></li>
+                  <li><a href="{% url 'logoPage' %}">لوگو</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- navbar -->
+        
+            </div>
+        </header>
+
+
+          <!-- ======= Hero Section ======= -->
+  <section class="hero-section" id="hero">
+
+    <div class="wave">
+
+      <svg width="50%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
+            <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
+          </g>
+        </g>
+      </svg>
+
+    </div>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 hero-text-image">
+          <div class="row">
+            <div class="iphone-wrap">
+              <img src="{% static './assets/img/22.png' %}" alt="Image" class="phone-1" data-aos="fade-right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Home Section ======= -->
+    <section class="section">
+      <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-5" data-aos="fade-up">
+            <h2 class="section-heading">چرا اکوایکس؟</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="">
+            <div class="feature-1 text-center">
+              <div class="wrap-icon icon-1">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+              <h3 class="mb-3">رشد کسب و کار شما</h3>
+              <p>رشد کسب و کار شما بدون هیچگونه دغدغه ای</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-1 text-center">
+              <div class="wrap-icon icon-1">
+                <i class="bi bi-puzzle"></i>
+              </div>
+              <h3 class="mb-3">خلاقیت</h3>
+              <p>ترکیبی از خلاقیت و استراتژی</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-1 text-center">
+              <div class="wrap-icon icon-1">
+                <i class="bi bi-clipboard2-check"></i>
+              </div>
+              <h3 class="mb-3">مدیریت</h3>
+              <p>مدیریت کامل کسب و کار شما </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <br>
+    <h2 class="section-heading header2 mb-0 pb-0">خدمات اکوایکس</h2>
+
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 me-auto">
+            <h2 class="mb-4">دیجیتال مارکتینگ</h2>
+            <p class="mb-4">مدت هاست که در فضای آنلاین  مشغول فعالیت هستید و نتونستید به اون فروشی که می خواستید، برسید؟ تیم دیجیتال مارکتینگ اکوایکس اینجاست تا شما رو به اون فروشی که می خواهید برسونه...</p>
+            <p><a href="{% url 'projectPage' %}" class="btn btn-primary">ثبت درخواست</a></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <img src="{% static './assets/img/Digital Marketing.png' %}" alt="دیجیتال مارکتینگ" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 ms-auto order-2">
+            <h2 class="mb-4">استودیو و گرافیک دیزاین</h2>
+            <p class="mb-4">همیشه در کنار یه استراتژی و مدیریت کسب وکار شبکه های اجتماعی نیاز به محتوای با کیفیت و خلاقانه هست که کسب و کار شما رو چند سطح بالاتر ببره. تیم تولید محتوا واستودیوی اکوایکس در ااین زمینه پاسخگوی شماست.</p>
+            <p><a href="{% url 'logoPage' %}" class="btn btn-primary">ثبت درخواست طراحی</a></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="{% static './assets/img/Graphic Design.png' %}" alt="گرافیک دیزاین" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 me-auto">
+            <h2 class="mb-4">برندینگ</h2>
+            <p class="mb-4">مدت هاست که در فضای آنلاین  مشغول فعالیت هستید و نتونستید به اون فروشی که می خواستید، برسید؟ تیم دیجیتال مارکتینگ اکوایکس اینجاست تا شما رو به اون فروشی که می خواهید برسونه...</p>
+            <p><a href="{% url 'projectPage' %}" class="btn btn-primary">ثبت درخواست برندینگ</a></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <img src="{% static './assets/img/Branding.png' %}" alt="دیجیتال مارکتینگ" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 ms-auto order-2">
+            <h2 class="mb-4">طراحی سایت</h2>
+            <p class="mb-4">به دنبال یک مکان اختصاصی با ظاهری مناسب و بهینه شده برای کسب و کار خودتون می گردید؟ تیم طراحی و طراحی سایت اکوایکس می تواند با هر بودجه ای که دارید یک سایت مناسب در اختیارتون قرار بده. شما میتونید از آن برای معرفی خخودتون بپردازید. همچنین میتونید محصولات خود را در آن جا به فروش برسونید!</p>
+          </div>
+          <div class="col-md-6" data-aos="fade-right">
+            <img src="{% static './assets/img/WD.png' %}" alt="گرافیک دیزاین" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonials Section ======= -->
+    <section class="section border-top border-bottom">
+      <div class="membersPanel">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-4">
+            <h2 class="section-heading">اعضا</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center" data-aos="fade-up">
+          <!--  1   -->
+          <div class="col-lg-1 col-sm-6 margin">
+            <div class="card">
+              <img src="{% static './assets/img/member.png' %}" class="card-img-top" alt="member">
+              <div class="card-body">
+                <h5 class="card-title">User 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-phone"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--  2   -->
+          <div class="col-lg-1 col-sm-6 margin">
+            <div class="card">
+              <img src="{% static './assets/img/member.png' %}" class="card-img-top" alt="member">
+              <div class="card-body">
+                <h5 class="card-title">User 2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-phone"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--  3   -->
+          <div class="col-lg-1 col-sm-6 margin">
+            <div class="card">
+              <img src="{% static './assets/img/member.png' %}" class="card-img-top" alt="member">
+              <div class="card-body">
+                <h5 class="card-title">انوشیروان هوشمند</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/anooshiravan-G1/" class="btn btn-primary socialIcons"><i class="bi bi-github"></i></a>
+                <a href="mailto:hanosheravan@yahoo.com" class="btn btn-primary socialIcons"><i class="bi bi-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/anooshiravan-houshmand-297ba6196" class="btn btn-primary socialIcons"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--  4   -->
+          <div class="col-lg-1 col-sm-6 margin">
+            <div class="card">
+              <img src="{% static './assets/img/member.png' %}" class="card-img-top" alt="member">
+              <div class="card-body">
+                <h5 class="card-title">User 3</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-envelope"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--  5   -->
+          <div class="col-lg-1 col-sm-6 margin">
+            <div class="card">
+              <img src="{% static './assets/img/member.png' %}" class="card-img-top" alt="member">
+              <div class="card-body">
+                <h5 class="card-title">User 4</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary socialIcons deactive"><i class="bi bi-envelope"></i></a>
+                <a href="#" class="btn btn-primary socialIcons deactive"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-primary socialIcons"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Form Section ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+
+            <h2>فرم تماس</h2>
+            <p class="mb-0">برای تماس با ما فرم زیر را پر کرده و منتظر پاسخ ما باشید.</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 ms-auto order-2" data-aos="fade-up">
+            <img src="{% static './assets/img/Contact.png' %}" alt="تماس با ما" class="img-fluid">
+          </div>
+
+          <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
+            {% block content %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            <form action="" method="post" role="form" name="contactForm" id="contactForm" data-toggle="validator">
+              {% csrf_token %} 
+              <div class="row input-control">
+                <div class="col-md-6 form-group">
+                  <label for="{{ form.name.id_for_label }}">نام و نام خانوادگی(ضروری)</label>
+                  {{ form.name }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="{{ form.workName.id_for_label }}">نام کسب و کار(ضروری)</label>
+                  {{ form.workName }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="{{ form.phone_number.id_for_label }}">شماره تماس(ضروری)</label>
+                  {{ form.phone_number }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="{{ form.email.id_for_label }}">ایمیل</label>
+                  {{ form.email }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <label for="{{ form.socialName.id_for_label }}">شبکه اجتماعی کسب و کار</label>
+                  {{ form.socialName }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <label for="{{ form.subject.id_for_label }}">موضوع</label>
+                  {{ form.subject }}
+                  <div class="error"></div>
+                </div>
+                <div class="col-md-12 form-group mt-3">
+                  <label for="{{ form.message.id_for_label }}">توضیحات(ضروری)</label>
+                  {{ form.message }}
+                  <div class="error"></div>
+                </div>
+
+
+                <div class="col-md-6 form-group">
+                  <button class="btn btn-primary d-block w-100" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> ارسال پیام</button>
+                </div>
+              </div>
+
+            </form>
+            {% endblock %}
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+
+        <!--  Scripts   -->
+        <script src="{% static './assets/js/aos.js' %}"></script>
+        <!--  jQuery    -->
+        <script src="{% static './assets/js/jquery-3.6.0.min.js' %}"></script>
+        <!--  BootStrap -->
+        <script src="{% static './assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{%static './assets/js/swiper-bundle.min.js' %}"></script>
+        <!--  Custom JS-->
+        <script src="{% static './assets/js/main.js' %}"></script>
+    </body>
+</html>
