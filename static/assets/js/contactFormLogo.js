@@ -86,7 +86,6 @@ submitBtn.addEventListener('click', () => {
     if($('#pName').val().trim()=="" || $('#cName').val().trim()=="" || 
         $('#bName').val().trim()=="" || $('#service').val().trim()=="" || $('#wPhone').val().trim()=="" ||
         $('#pPhone').val().trim()=="" || $('#email').val().trim()=="" || $('#sAddress').val().trim()=="" ||
-        
         $('#bExplain').val().trim()=="" || $('#gExplain').val().trim()=="" || $('#isd').val().trim()=="" ||
         $('#nameInLogo').val().trim()=="" || $('#tags').val().trim()=="" || $('#isdExplain').val().trim()=="" ||
         $('#usage').val().trim()=="" || $('#recommendation').val().trim()=="" || $('#logoType').val().trim()=="" ||

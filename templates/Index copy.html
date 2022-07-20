@@ -1,6 +1,43 @@
-{% extends "./base.html" %}
 {% load static %}
-{% block contents %}
+<!doctype html>
+<html lang="fa" dir="rtl">
+    <head>
+        <!-- Bootstrap core CSS -->
+        <!--<link href="./css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="{% static './assets/css/aos.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/bootstrap.rtl.min.css' %}" rel="stylesheet">
+        <link href="{% static './assets/css/swiper-bundle.min.css' %}" rel="stylesheet">
+        <!-- Custom Style   -->
+        <link href="{% static './assets/css/style.css' %}" rel="stylesheet">
+        <!-- Icons  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    </head>
+
+
+    <body>
+        <!--    Header     -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex justify-content-between align-items-center">
+        
+              <div class="logo">
+                <h1><a href="{% url 'indexPage' %}">اکوایکس</a></h1>
+                <!-- logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+              </div>
+        
+              <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="active " href="{% url "indexPage" %}">خانه</a></li>
+                  <li><a href="{% url 'projectPage' %}">پروژه</a></li>
+                  <li><a href="{% url 'logoPage' %}">لوگو</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+              </nav><!-- navbar -->
+        
+            </div>
+        </header>
+
+
           <!-- ======= Hero Section ======= -->
   <section class="hero-section" id="hero">
 
@@ -311,5 +348,5 @@
         <script src="{%static './assets/js/swiper-bundle.min.js' %}"></script>
         <!--  Custom JS-->
         <script src="{% static './assets/js/main.js' %}"></script>
-
-        {% endblock contents %}        
+    </body>
+</html>

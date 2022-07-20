@@ -3,5 +3,5 @@ from .views import projectView, projectConfirm
 
 urlpatterns= [
     path('projects', projectView.as_view(), name='projectPage'),
-     path('projectConfirm',projectConfirm,name="projectConfirm"),
+     path('projectConfirm', projectConfirm, name="projectConfirm"),
 ]

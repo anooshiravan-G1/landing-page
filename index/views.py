@@ -1,7 +1,9 @@
+import imp
 from django.views.generic import FormView #,TemplateView 
 from .forms import contactMe
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.shortcuts import render
 
 
 
@@ -23,3 +25,6 @@ class indexView(FormView):
                     return HttpResponseRedirect('')
             
 
+
+def services(request):
+    return render(request, 'service.html')
