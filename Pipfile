@@ -11,6 +11,8 @@ whitenoise = "*"
 django-jazzmin = "*"
 django-suit = {git = "https://github.com/AhmadiEhsan/django-suit-RTL"}
 pillow = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
