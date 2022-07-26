@@ -281,26 +281,9 @@ JAZZMIN_UI_TWEAKS = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #deploy to heroku
 import django_heroku
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+DISABLE_COLLECTSTATIC=1
