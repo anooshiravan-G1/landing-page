@@ -30,7 +30,9 @@ SECRET_KEY = 'django-insecure-+ekzx(qocc8p%e$778m*ord#i9+367w@qg28krhuy!gsi(*=--
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://landingpage12345626.herokuapp.com/',
+'localhost',
+'127.0.0.1']
 
 
 # Application definition
@@ -275,7 +277,4 @@ JAZZMIN_UI_TWEAKS = {
 
 
 
-#deploy to heroku
-import django_heroku
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
